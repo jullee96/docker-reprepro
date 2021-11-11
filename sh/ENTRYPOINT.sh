@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-REPO_NAME="hamonize"
+REPO_NAME="jullee"
 mkdir /tmp/repo-keys/
 
 echo "setup key...."
