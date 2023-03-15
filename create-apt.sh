@@ -16,8 +16,8 @@ fi
 docker-compose up -d
 
 # add apt gpg key && repo
-# wget -qO - http://localhost:8088/jullee.pubkey.gpg | sudo apt-key add -
-# echo "deb [arch=amd64] http://localhost:8088 hamonize main" | sudo tee /etc/apt/sources.list.d/hamonize.list
+# wget -qO - http://192.168.0.31/jullee.pubkey.gpg | sudo apt-key add -
+# echo "deb [arch=amd64] http://192.168.0.31 jullee main" | sudo tee /etc/apt/sources.list.d/hamonize.list
 # sudo apt-get update 
 
 
