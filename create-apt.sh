@@ -14,12 +14,12 @@ if [ "$1" = "--gen-ssh-key" ]; then
     IFS='=' read -r -a args <<< "$2"
 
     # docker execute
-    docker-compose build --build-arg REPO_NAME="${args[1]}" && docker-compose up
+    docker-compose build --build-arg REPO_NAME="${args[1]}" && docker-compose up -d
 
 else
     IFS='=' read -r -a args <<< "$1"
     # docker execute
-    docker-compose build --build-arg REPO_NAME="${args[1]}" && docker-compose up
+    docker-compose build --build-arg REPO_NAME="${args[1]}" && docker-compose up -d
 
 fi
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-echo "ENTRYPOINT start >>>>> $REPO_ENV_NAME"
-echo "entrypoint - repo name :  $REPO_NAME"
+echo "ENTRYPOINT start..."
+echo "entrypoint - repo name :  $REPO_ENV_NAME"
 mkdir /tmp/repo-keys/
 
 echo "setup key....$REPO_ENV_NAME"
