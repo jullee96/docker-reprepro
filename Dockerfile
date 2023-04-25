@@ -1,6 +1,7 @@
 FROM eilandert/ubuntu-base:rolling
 
-MAINTAINER julie lee "bono6315@gmail.com"
+ARG REPO_NAME
+RUN echo "dockerfile : $REPO_NAME" 
 
 ## Install packages
 RUN export DEBIAN_FRONTEND=noninteractive && \
@@ -44,5 +45,6 @@ RUN \
 # Start
 ENV PATH "/repo/bin:${PATH}"
 EXPOSE 22 80
+ENV REPO_ENV_NAME=$REPO_NAME
 ENTRYPOINT ["/start.sh"]
 CMD []

@@ -1,7 +1,6 @@
 #!/bin/sh
 set -e
-
-echo "Preparing runtime...."
+echo "Preparing runtime....$REPO_ENV_NAME"
 
 # =============================
 # Installing template files
@@ -80,7 +79,7 @@ done
 
 # =============================
 echo "ENTRYPOINT Starting ...."
-./ENTRYPOINT.sh
+./ENTRYPOINT.sh $REPO_ENV_NAME
 echo "ENTRYPOINT End....."
 
 echo "Starting services...."

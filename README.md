@@ -16,7 +16,7 @@ This program can simply make your own individual APT repository using a docker.
 If you don't have a sh key, start with the command below.
 
 ```
-sh create-apt.sh --gen-ssh-key
+./create-apt.sh --gen-ssh-key --repo={my-repo-name}
 ```
 
 
@@ -24,8 +24,11 @@ sh create-apt.sh --gen-ssh-key
 If you have a sh key, start with the command below.
 
 ```
-sh create-apt.sh
+./create-apt.sh --repo={my-repo-name}
 ```
 
 
-
+### for custom os
+```
+wget -qO - http://{your ip}/{$REPO_NAME}.pubkey.gpg | apt-key add -
+```
